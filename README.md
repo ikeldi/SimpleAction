@@ -1,4 +1,4 @@
 # SimpleAction
-Spigot plugin, complements /me with * before the text
+Spigot plugin, change /me to * before the text
 # Screenshots
 Later
