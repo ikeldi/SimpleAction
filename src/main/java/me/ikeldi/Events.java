@@ -30,7 +30,10 @@ public class Events implements Listener {
 
     @EventHandler
     public void onPreCommand(PlayerCommandPreprocessEvent e){
-
+        if(e.getMessage().startsWith("/me")){
+            e.getPlayer().sendMessage(ChatColor.RED + "Try alternative: *<action>");
+            e.setCancelled(true);
+        }
     }
 
 }
