@@ -1,0 +1,6 @@
+name: SimpleAction
+version: ${project.version}
+main: me.ikeldi.SimpleAction
+api-version: 1.13
+authors: [ikeldi]
+description: SimpleAction
