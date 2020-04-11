@@ -6,6 +6,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.permissions.Permission;
 
 public class Events implements Listener {
@@ -21,10 +22,15 @@ public class Events implements Listener {
             msg.append(" ");
             msg.append(ChatColor.GOLD);
             msg.append(e.getMessage().replace("*", ""));
-//            String msg = ChatColor.AQUA + e.getPlayer().getDisplayName() + " " + ChatColor.GOLD + e.getMessage().replace("*", ""); // My old string version :)
+//            String msg = ChatColor.AQUA + e.getPlayer().getDisplayName() + " " + ChatColor.GOLD + e.getMessage().replace("*", ""); // old string version :)
             Bukkit.broadcastMessage(msg.toString());
             e.setCancelled(true);
         }
+    }
+
+    @EventHandler
+    public void onPreCommand(PlayerCommandPreprocessEvent e){
+
     }
 
 }
